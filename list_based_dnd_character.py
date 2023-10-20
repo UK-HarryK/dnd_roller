@@ -34,7 +34,7 @@ variables = {sex, races, personalities, classes}
 
 def class_roller(arr):
     d = len(arr) # As mentioned previously, arrays are indexed from 0. len(arr) counts the length of the array from 1, and the random.randrange() defaults to start at 0, but WILL NOT INCLUDE the given number in the number generation
-    r = random.randrange(d) # As shown earlier, we wouldnt want to roll for the first entry in each subclass tuple, as this is reserved to tell us which class has been rolled
+    r = random.randrange(1, d) # As shown earlier, we wouldnt want to roll for the first entry in each subclass tuple, as this is reserved to tell us which class has been rolled
     sub = arr[r]
     return [sub, arr[0]] # We return a list, with the class and subclass
 
